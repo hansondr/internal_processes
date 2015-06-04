@@ -1,4 +1,4 @@
-# Internal Processes
+# Internal Processes [![Build Status](https://travis-ci.org/hansondr/internal_processes.svg?branch=master)](https://travis-ci.org/hansondr/internal_processes)
 
 This is a container application to tie together a series of components.
 
