@@ -1,0 +1,11 @@
+#!/bin/bash
+rails plugin new ./components/$@ --mountable -TGJBS --dummy-path=spec/dummy
+cd ./components/$@
+bundle exec rake app:rails:template LOCATION=../component_template.rb
+
+echo "*** Initializing RSpec"
+rspec --init
+
+echo "  - using spec_helper.rb template"
+rm spec/spec_helper.rb
+cp ../spec_helper-template.rb spec/spec_helper.rb
