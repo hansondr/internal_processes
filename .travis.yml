@@ -1,6 +1,7 @@
 gemfile:
   - Gemfile
   - components/user_data/Gemfile
+  - components/user_admin_ui/Gemfile
 script:
   - travis_retry ./test.sh
 before_install:
