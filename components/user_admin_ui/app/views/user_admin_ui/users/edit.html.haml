@@ -1,0 +1,9 @@
+%h1 Edit User
+
+=render 'form'
+
+%h2 Team Membership
+
+=render @user.teams
+
+=link_to 'Back', users_path, class: 'link--button'
