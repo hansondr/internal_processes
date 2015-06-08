@@ -4,8 +4,10 @@ require File.expand_path("../dummy/config/environment", __FILE__)
 
 require 'rspec/rails'
 require 'database_cleaner'
+require 'factory_girl_rails'
 require 'capybara/rails'
 require 'capybara/rspec'
+
 
 Dir[UserAdminUi::Engine.root.join("spec/support/**/*.rb")].each {|f| require f}
 
@@ -22,6 +24,8 @@ RSpec.configure do |config|
   config.profile_examples = nil
   config.order = :random
   Kernel.srand config.seed
+
+  config.include FactoryGirl::Syntax::Methods
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction

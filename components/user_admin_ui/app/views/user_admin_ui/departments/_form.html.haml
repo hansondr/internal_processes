@@ -1,0 +1,8 @@
+=form_for @department do |f|
+  =f.label :name
+  =f.text_field :name
+
+  =f.label :company
+  =f.collection_select :company_id, @companies, :id, :name
+
+  =f.submit
