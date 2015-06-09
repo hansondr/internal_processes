@@ -3,6 +3,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../dummy/config/environment", __FILE__)
 
 require 'rspec/rails'
+require 'factory_girl_rails'
 require 'shoulda/matchers'
 require 'database_cleaner'
 
@@ -21,6 +22,8 @@ RSpec.configure do |config|
   config.profile_examples = nil
   config.order = :random
   Kernel.srand config.seed
+
+  config.include FactoryGirl::Syntax::Methods
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
