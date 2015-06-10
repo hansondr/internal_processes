@@ -8,7 +8,6 @@ require 'factory_girl_rails'
 require 'capybara/rails'
 require 'capybara/rspec'
 
-
 Dir[UserAdminUi::Engine.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|

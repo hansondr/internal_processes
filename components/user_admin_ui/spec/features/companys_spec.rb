@@ -1,4 +1,6 @@
 RSpec.describe 'company admin', type: :feature do
+  before { sign_in }
+
   it 'allows for the creation of companies' do
     visit 'user_admin/companies'
 

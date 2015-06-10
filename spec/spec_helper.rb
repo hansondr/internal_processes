@@ -3,10 +3,13 @@ ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 
 require 'rspec/rails'
+require 'factory_girl_rails'
 require 'capybara/rails'
 require 'capybara/rspec'
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+
+require_relative '../components/user_admin_ui/spec/support/oauth_integration_spec_helper'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -21,4 +24,6 @@ RSpec.configure do |config|
   config.profile_examples = nil 
   config.order = :random
   Kernel.srand config.seed
+
+  config.include FactoryGirl::Syntax::Methods
 end

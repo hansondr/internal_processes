@@ -14,6 +14,5 @@ module UserAdminUi
         app.config.paths["db/migrate"].concat config.paths["db/migrate"].expanded
       end
     end
-
   end
 end

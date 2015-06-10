@@ -9,7 +9,9 @@ require "action_view/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
+
 require "user_admin_ui"
+#require "rack_session_access"
 
 module Dummy
   class Application < Rails::Application
