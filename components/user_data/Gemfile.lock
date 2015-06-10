@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/thoughtbot/shoulda-matchers.git
+  revision: a3fb06c369c2b5e96831cb2c6c8532de8e2f0e62
+  specs:
+    shoulda-matchers (3.0.0.rc1)
+      activesupport (>= 4.0.0)
+
 PATH
   remote: .
   specs:
@@ -101,7 +108,7 @@ GEM
     rspec-mocks (3.2.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.2.0)
-    rspec-rails (3.2.2)
+    rspec-rails (3.2.3)
       actionpack (>= 3.0, < 4.3)
       activesupport (>= 3.0, < 4.3)
       railties (>= 3.0, < 4.3)
@@ -110,8 +117,6 @@ GEM
       rspec-mocks (~> 3.2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
-    shoulda-matchers (2.8.0)
-      activesupport (>= 3.0.0)
     sprockets (3.2.0)
       rack (~> 1.0)
     sprockets-rails (2.3.1)
@@ -132,6 +137,6 @@ DEPENDENCIES
   factory_girl_rails
   rails
   rspec-rails
-  shoulda-matchers
+  shoulda-matchers (~> 3.0.0.rc)!
   sqlite3
   user_data!
