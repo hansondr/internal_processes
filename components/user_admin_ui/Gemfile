@@ -5,4 +5,5 @@ gemspec
 path '../' do
   gem 'user_data'
   gem 'admin_assets'
+  gem 'oauth'
 end

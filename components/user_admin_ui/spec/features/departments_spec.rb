@@ -1,8 +1,11 @@
 RSpec.describe 'department admin', type: :feature do
+  before { sign_in }
+
   it 'allows for the creation of departments' do
     company = create(:company, name: 'Test Company')
 
-    visit 'user_admin/departments'
+    visit '/user_admin/departments'
+
     click_link 'New Department'
     fill_in 'Name', with: 'Test Department'
     select company.name, from: :department_company_id
@@ -16,7 +19,7 @@ RSpec.describe 'department admin', type: :feature do
     company_b = create(:company, name: 'Company B')
     department = create(:department, name: 'Dept. A', company: company_a)
 
-    visit 'user_admin/departments'
+    visit '/user_admin/departments'
     expect(page).to have_text department.name, count: 1
     click_link department.name
     fill_in 'Name', with: 'Dept. B'
